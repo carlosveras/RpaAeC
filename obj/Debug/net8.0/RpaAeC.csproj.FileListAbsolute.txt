@@ -150,6 +150,7 @@ C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.GeneratedMSBuildEditorConfig.edi
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.AssemblyInfoInputs.cache
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.AssemblyInfo.cs
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.csproj.CoreCompileInputs.cache
+C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.sourcelink.json
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.csproj.CopyComplete
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\RpaAeC.dll
 C:\TestesDeEmpresas\AeC\obj\Debug\net8.0\refint\RpaAeC.dll
