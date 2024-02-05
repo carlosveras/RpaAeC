@@ -9,7 +9,7 @@ namespace RpaAeC.Extensions
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection ConfiureServices(this IServiceCollection services)
+        public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
             return services
                 .AddDatabase()

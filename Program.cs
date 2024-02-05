@@ -8,7 +8,7 @@ class Program
     public static async Task Main(string[] args)
     {
         var builder = new HostBuilder()
-            .ConfigureServices(services => services.ConfiureServices());
+            .ConfigureServices(services => services.ConfigureServices());
 
         var host = builder.Build();
 
@@ -24,7 +24,7 @@ class Program
 
             string query = "Python";
 
-            Console.WriteLine($"Termo de pesquisa para este teste automatizado: {query}");
+            Console.WriteLine($"Termo de pesquisa para o teste: {query}");
 
             var result = await searchService.SearchTrainingchAsync(query);
 
@@ -42,11 +42,8 @@ class Program
                     Console.WriteLine($"Professor: {item.Professor}");
                     Console.WriteLine($"Carga Horária: {item.CargaHoraria}");
                     Console.WriteLine($"Descrição: {item.Descricao}");
-                    Console.WriteLine("--------------------------------------");
                 }
             }
-
-            Console.ReadKey();
 
         }
         catch (Exception ex)

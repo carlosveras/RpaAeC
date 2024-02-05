@@ -34,7 +34,7 @@ namespace RpaAeC.Services
             IWebElement botaoPesquisar = _driver.FindElement(By.XPath("/html/body/main/section[1]/header/div/nav/div[2]/form/button"));
 
             if (botaoPesquisar == null)
-                return "Erro ao pesquisar a tag";
+                return "Erro ao pesquisar a TAG";
 
             botaoPesquisar.Click();
 
@@ -92,14 +92,10 @@ namespace RpaAeC.Services
         private string GetCargaHoraria()
         {
             if (IsElementPresent(By.ClassName("formacao__info-destaque")))
-            {
                 return _driver.FindElement(By.ClassName("formacao__info-destaque")).Text;
-            }
 
             if (IsElementPresent(By.ClassName("courseInfo-card-wrapper-infos")))
-            {
                 return _driver.FindElement(By.ClassName("courseInfo-card-wrapper-infos")).Text;
-            }
 
             return "";
         }
@@ -108,9 +104,7 @@ namespace RpaAeC.Services
         {
             List<string> nomesProfessores = [];
             if (!IsElementPresent(By.ClassName("formacao-instrutores-lista")))
-            {
                 return GetNomeProfessoresBySectionXPath();
-            }
 
             var professoresUl = _driver.FindElement(By.ClassName("formacao-instrutores-lista"));
             var professoresLi = professoresUl.FindElements(By.TagName("li"));
@@ -118,15 +112,11 @@ namespace RpaAeC.Services
             foreach (var professor in professoresLi)
             {
                 if (!IsElementPresent(By.ClassName("formacao-instrutor-nome")))
-                {
                     continue;
-                }
 
                 var nome = professor.FindElement(By.ClassName("formacao-instrutor-nome")).Text;
                 if (!string.IsNullOrEmpty(nome))
-                {
                     nomesProfessores.Add(nome);
-                }
             }
 
             return string.Join(", ", nomesProfessores);
@@ -153,9 +143,7 @@ namespace RpaAeC.Services
                     .Text;
 
                 if (!string.IsNullOrEmpty(nome))
-                {
                     nomesProfessores.Add(nome);
-                }
             }
 
             return string.Join(", ", nomesProfessores);
